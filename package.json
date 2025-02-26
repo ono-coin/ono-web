@@ -1,0 +1,30 @@
+{
+    "name": "ono-web",
+    "version": "1.0.0",
+    "description": "JavaScript API for ONO blockchain",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ono-coin/ono-web.git"
+    },
+    "keywords": [
+        "ONO",
+        "Blockchain",
+        "API"
+    ],
+    "author": "ono-coin",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ono-coin/ono-web/issues"
+    },
+    "homepage": "https://github.com/ono-coin/ono-web#readme",
+    "dependencies": {
+        "big.js": "^6.2.2",
+        "bip39": "^3.1.0",
+        "hdkey": "^2.1.0",
+        "uuid": "^11.1.0"
+    }
+}
