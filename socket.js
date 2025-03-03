@@ -22,7 +22,7 @@ class OnoSocketClient {
     subscribe(handler, errorHandler) {
         if (this.#subscribed) return;
 
-        this.socket = new WebSocket(`${this.coreHost}/node-id=${this.#id}`);
+        this.socket = new WebSocket(`${this.coreHost}?node-id=${this.#id}`);
 
         this.socket.on('open', () => {
             this.#subscribed = true;
