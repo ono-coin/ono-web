@@ -7,7 +7,7 @@ class OnoSocketClient {
     #subscribed;
 
     /**
-     * @param {string} [coreHost]s
+     * @param {string} [coreHost]
      */
     constructor(coreHost) {
         this.coreHost = coreHost ? webUtils.toWsAddress(coreHost) : 'ws://core.ono.gg';
