@@ -1,3 +1,4 @@
+const WebSocket = require('ws');
 const webUtils = require('./web-utils');
 const { v4: uuidv4 } = require('uuid');
 
