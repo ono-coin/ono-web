@@ -5,6 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 class OnoSocketClient {
     #id;
     #subscribed;
+    #pingInterval;
 
     /**
      * @param {string} [coreHost]
@@ -26,10 +27,14 @@ class OnoSocketClient {
 
         this.socket.on('open', () => {
             this.#subscribed = true;
+            this.#pingInterval = setInterval(() => {
+                this.socket.ping();
+            }, 30000);
         });
 
         this.socket.on('close', () => {
             this.#subscribed = false;
+            clearInterval(this.#pingInterval);
         });
 
         this.socket.on('message', async (message) => {
