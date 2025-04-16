@@ -75,7 +75,7 @@ class BrowserClient extends AbstractClient {
         this.socket.onopen = () => {
             this.subscribed = true;
             this.pingInterval = setInterval(() => {
-                this.socket.send(JSON.stringify({ type: 'ping' }));
+                this.socket.send(JSON.stringify({ type: 'PING' }));
             }, 30000);
         };
 
