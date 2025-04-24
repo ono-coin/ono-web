@@ -83,3 +83,18 @@ exports.sendTransaction = async (transactionData) => {
     });
     return response.json();
 };
+
+/**
+ * @param {string} hash
+ * @returns {Promise<Transaction & {blockTransaction: {blockId: number}}>}
+ */
+exports.getTransactionByHash = async (hash) => {
+    const url = getFullUrl(`/transaction/by-hash/${hash}`);
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    return response.json();
+};
